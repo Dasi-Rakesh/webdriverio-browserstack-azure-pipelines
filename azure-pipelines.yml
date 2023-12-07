@@ -19,11 +19,11 @@ steps:
   inputs:
     BrowserStackServiceEndPoint: 'browserstack-connection'
 
+- task: BrowserStackResults@1
+  inputs:
+    browserstackProduct: 'automate'
+
 - script: |
     npm install
     npm run build
   displayName: 'npm install and build'
-
-- task: BrowserStackResults@1
-  inputs:
-    browserstackProduct: 'automate'
