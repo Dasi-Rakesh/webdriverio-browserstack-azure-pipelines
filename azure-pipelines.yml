@@ -20,6 +20,7 @@ steps:
 
 - script: |
     npm install
+    npm fund
     npm run test
   displayName: 'npm install and build'
 
