@@ -18,12 +18,14 @@ steps:
   inputs:
     BrowserStackServiceEndPoint: 'browserstack-connection'
     browserstackLocal: true
-
+  
 - script: |
     npm install
     npm fund
     npm run test
   displayName: 'npm install and build'
+
+- task: BrowserStackStopLocal@0
 
 - task: BrowserStackResults@1
   inputs:
